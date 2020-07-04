@@ -1,7 +1,7 @@
 node {
     docker.withRegistry('', '94770531-14e5-4d0b-957f-60091cf4e993') {
 
-        git url: "https://github.com/iconstorage/hello-kubernetes.git", credentialsId: '8c86de93-5329-4ccb-b6f8-fb06ff29e433'
+        ##git url: "https://github.com/iconstorage/hello-kubernetes.git", credentialsId: '8c86de93-5329-4ccb-b6f8-fb06ff29e433'
         env.GIT_COMMIT = sh(script: "git rev-parse HEAD", returnStdout: true).trim()
 
         stage "Build"
