@@ -1,3 +1,7 @@
+import hudson.FilePath
+import org.yaml.snakeyaml.Yaml
+import org.yaml.snakeyaml.constructor.CustomClassLoaderConstructor
+
 apiVersion: apps/v1
 kind: Service
 metadata:
