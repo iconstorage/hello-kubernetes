@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: hello-kubernetes
-        image: michaelatnutanix/hello-kubernetes:${GIT_COMMIT}
+        image: iconstorage/hello-kubernetes:${GIT_COMMIT}
         ports:
         - containerPort: 8080
