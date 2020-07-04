@@ -1,16 +1,3 @@
-import hudson.FilePath
-import org.yaml.snakeyaml.Yaml
-import org.yaml.snakeyaml.constructor.CustomClassLoaderConstructor
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.yaml.snakeyaml.Yaml;
-
 import io.kubernetes.client.ApiException;
 import io.kubernetes.client.models.ExtensionsV1beta1Deployment;
 import io.kubernetes.client.models.V1Namespace;
