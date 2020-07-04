@@ -1,5 +1,5 @@
 node {
-    docker.withRegistry('', '8c86de93-5329-4ccb-b6f8-fb06ff29e433') {
+    docker.withRegistry('', 'e25b0551-7255-4a1f-b6fe-64f5338f96ec') {
 
         git url: "https://github.com/iconstorage/hello-kubernetes.git", credentialsId: '8c86de93-5329-4ccb-b6f8-fb06ff29e433'
         env.GIT_COMMIT = sh(script: "git rev-parse HEAD", returnStdout: true).trim()
