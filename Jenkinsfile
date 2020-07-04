@@ -1,8 +1,3 @@
-import io.kubernetes.client.ApiException;
-import io.kubernetes.client.models.ExtensionsV1beta1Deployment;
-import io.kubernetes.client.models.V1Namespace;
-import io.kubernetes.client.models.V1Service;
-
 node {  
     docker.withRegistry('', 'f1b62afa-a6b3-4030-a168-06f69c6cdb5d') {
 
