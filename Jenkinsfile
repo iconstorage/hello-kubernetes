@@ -3,7 +3,6 @@ node {
 
         git url: "https://github.com/iconstorage/hello-kubernetes.git", credentialsId: '8c86de93-5329-4ccb-b6f8-fb06ff29e433'
         env.GIT_COMMIT = sh(script: "git rev-parse HEAD", returnStdout: true).trim()
-        sh "echo $PATH"
         stage "Build"
         def helloK8s = docker.build "iconstorage/hello-kubernetes"
 
