@@ -5,7 +5,7 @@ node {
         env.GIT_COMMIT = sh(script: "git rev-parse HEAD", returnStdout: true).trim()
 
         stage "Build"
-        def helloK8s = docker.build "michaelatnutanix/hello-kubernetes"
+        def helloK8s = docker.build "iconstorage/hello-kubernetes"
 
         stage "Publish"
         helloK8s.push 'latest'
