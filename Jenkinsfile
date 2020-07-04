@@ -11,6 +11,6 @@ node {
         helloK8s.push "${env.GIT_COMMIT}"
 
         stage "Deploy"    
-      kubernetesDeploy configs: 'hello.yaml', kubeConfig: [path: ''], kubeconfigId: '3a0c84f5-9674-4173-bb09-3bea5a62969b', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+      kubernetesDeploy configs: 'hello.yaml', enableConfigSubstitution: true, kubeConfig: [path: ''], kubeconfigId: '3a0c84f5-9674-4173-bb09-3bea5a62969b', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
     }
 }
