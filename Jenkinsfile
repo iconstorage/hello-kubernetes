@@ -1,4 +1,4 @@
-Testestsnode {
+node {
     docker.withRegistry('', '93632a7f-bcab-4677-9e91-0aad2ebfb6ec') {
 
         git url: "https://github.com/iconstorage/hello-kubernetes.git", credentialsId: '8c86de93-5329-4ccb-b6f8-fb06ff29e433'
