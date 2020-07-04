@@ -11,8 +11,6 @@ node {
         helloK8s.push "${env.GIT_COMMIT}"
 
         stage "Deploy"    
-        env.JAVA_HOME="${tool 'jdk1.8.0_111'}"
-        env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
       kubernetesDeploy configs: 'hello-kubernetes-dep.yaml', enableConfigSubstitution: true, kubeConfig: [path: ''], kubeconfigId: '3a0c84f5-9674-4173-bb09-3bea5a62969b', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
     }
 }
