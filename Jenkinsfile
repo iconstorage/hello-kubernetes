@@ -1,3 +1,7 @@
+import hudson.FilePath
+import org.yaml.snakeyaml.Yaml
+import org.yaml.snakeyaml.constructor.CustomClassLoaderConstructor
+
 node {  
     docker.withRegistry('', 'f1b62afa-a6b3-4030-a168-06f69c6cdb5d') {
 
