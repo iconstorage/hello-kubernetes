@@ -1,7 +1,7 @@
 node {  
-    docker.withRegistry('', 'ecb731f4-bb25-4c99-b3ca-4b58b8108a90') {
+    docker.withRegistry('', 'f1b62afa-a6b3-4030-a168-06f69c6cdb5d') {
 
-        git url: "https://github.com/iconstorage/hello-kubernetes.git", credentialsId: '97d6d0ed-e45d-44e2-a87d-4385b84e084f'
+        git url: "https://github.com/iconstorage/hello-kubernetes.git", credentialsId: '832a713f-d6a0-4a37-99cd-72dff8e0475b'
         env.GIT_COMMIT = sh(script: "git rev-parse HEAD", returnStdout: true).trim()
         stage "Build"
         def helloK8s = docker.build "iconstorage/hello-kubernetes"
@@ -11,6 +11,6 @@ node {
         helloK8s.push "${env.GIT_COMMIT}"
 
         stage "Deploy"    
-    kubernetesDeploy configs: 'hello-kubernetes-dep.yaml',  enableConfigSubstitution: false, kubeConfig: [path: ''], kubeconfigId: '1428240f-ca6f-4e65-a857-ce051e2a9bd2', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+    kubernetesDeploy configs: 'hello-kubernetes-dep.yaml',  enableConfigSubstitution: true, kubeConfig: [path: ''], kubeconfigId: '3a0c84f5-9674-4173-bb09-3bea5a62969b', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
     }
 }
