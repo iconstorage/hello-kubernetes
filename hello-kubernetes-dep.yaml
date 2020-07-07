@@ -17,3 +17,6 @@ spec:
         image: iconstorage/hello-kubernetes
         ports:
         - containerPort: 8080
+        env:
+        - name: MESSAGE
+          value: This is demo of Nutanix X iCON DevOps webinar
