@@ -21,12 +21,12 @@ LABEL org.opencontainers.image.title="Hello Kubernetes!" \
 WORKDIR /usr/src/
 
 # Install app dependencies
-COPY package.json /usr/src/app/
-COPY server.js /usr/src/app/
+COPY package.json /usr/src/
+COPY server.js /usr/src/
 RUN npm install
 
 # Bundle app source
-COPY . /usr/src/app
+COPY . /usr/src/
 
 
 USER node
