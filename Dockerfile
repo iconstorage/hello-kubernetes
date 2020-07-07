@@ -24,8 +24,8 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package.json /usr/src/app/
 COPY server.js /usr/src/app/
-COPY views /usr/src/app/views
-COPY static /usr/src/app/static
+COPY app/views /usr/src/app/views
+COPY app/static /usr/src/app/static
 RUN npm install
 
 # Bundle app source
