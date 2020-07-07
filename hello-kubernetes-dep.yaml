@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-kubernetes
-        image: iconstorage/hello-kubernetes:1.8
+        image: iconstorage/hello-kubernetes
         ports:
         - containerPort: 8080
         env:
