@@ -29,8 +29,8 @@ RUN npm install
 
 # Bundle app source
 COPY . /usr/src/
-COPY /usr/src/app/views/* /usr/src/app/views/
-COPY /usr/src/app/static/* /usr/src/app/static/
+COPY app/views/* /usr/src/app/views/
+COPY app/static/* /usr/src/app/static/
 
 USER node
 CMD [ "npm", "start" ]
