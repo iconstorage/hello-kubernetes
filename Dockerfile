@@ -18,16 +18,11 @@ LABEL org.opencontainers.image.title="Hello Kubernetes!" \
       org.opencontainers.image.revision=$IMAGE_SOURCE_REVISION 
 
 # Create app directory
-RUN mkdir -p /usr/src/app
-RUN mkdir -p /usr/src/views
-RUN mkdir -p /usr/src/static
-WORKDIR /usr/src/app
+WORKDIR /usr/src/
 
 # Install app dependencies
 COPY package.json /usr/src/app/
 COPY server.js /usr/src/app/
-COPY app/views/* /usr/src/app/views/
-COPY app/static/* /usr/src/app/static/
 RUN npm install
 
 # Bundle app source
