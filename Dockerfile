@@ -23,11 +23,14 @@ WORKDIR /usr/src/
 # Install app dependencies
 COPY package.json /usr/src/
 COPY server.js /usr/src/
+RUN mkdir -p /usr/src/views
+RUN mkdir -p /usr/src/static
 RUN npm install
 
 # Bundle app source
 COPY . /usr/src/
-
+COPY /usr/src/app/views/* /usr/src/app/views/
+COPY /usr/src/app/static/* /usr/src/app/static/
 
 USER node
 CMD [ "npm", "start" ]
