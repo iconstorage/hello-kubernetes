@@ -20,3 +20,14 @@ spec:
         env:
         - name: MESSAGE
           value: This is demo of Nutanix X iCON DevOps webinar
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-kubernetes
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: hello-kubernetes
