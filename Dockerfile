@@ -24,12 +24,13 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package.json /usr/src/app/
 COPY server.js /usr/src/app/
-COPY app/views /usr/src/app/views
-COPY app/static /usr/src/app/static
-RUN pm2 install
+
+RUN npm install
 
 # Bundle app source
 COPY . /usr/src/app
+COPY app/views /usr/src/app/views
+COPY app/static /usr/src/app/static
 
 USER node
 CMD [ "npm", "start" ]
