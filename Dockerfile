@@ -26,7 +26,7 @@ COPY package.json /usr/src/app/
 COPY server.js /usr/src/app/
 COPY app/views /usr/src/app/views
 COPY app/static /usr/src/app/static
-RUN npm install
+RUN pm2 install
 
 # Bundle app source
 COPY . /usr/src/app
