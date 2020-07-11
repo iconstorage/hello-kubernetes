@@ -19,4 +19,4 @@ spec:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: Nutanix X iCON DevOps Webinar v1.0(william)
+          value: Nutanix X iCON DevOps Webinar v1.0
