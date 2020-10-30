@@ -19,4 +19,4 @@ spec:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: HGC demo
+          value: HGC demo 2020 10 30
